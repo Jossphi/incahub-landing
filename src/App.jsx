@@ -72,7 +72,7 @@ export default function App() {
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: '#fdf4ea', borderBottom: '1px solid rgba(27,27,27,.07)' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', padding: '18px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
           <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <img src="/logo.png" alt="INCAhub" style={{ height: 42, width: 'auto' }} />
+            <img src="/logo.png" alt="INCAhub" style={{ height: 64, width: 'auto' }} />
           </a>
           <nav style={{ display: 'flex', alignItems: 'center', gap: 34, fontSize: 15, fontWeight: 500, color: '#3c3a38', flexWrap: 'wrap' }}>
             <a href="#nosotros" style={{ color: 'inherit' }}>Nosotros</a>
@@ -105,7 +105,7 @@ export default function App() {
             {/* sidebar */}
             <aside style={{ background: '#fafafa', borderRight: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 14px' }}>
-                <img src="/logo.png" alt="INCAhub" style={{ height: 26, width: 'auto' }} />
+                <img src="/logo.png" alt="INCAhub" style={{ height: 40, width: 'auto' }} />
               </div>
               {navItems.map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: '8px 10px', borderRadius: 8, fontSize: 13, color: '#5c5a57' }}>
@@ -273,7 +273,7 @@ export default function App() {
       <footer style={{ background: '#fff', padding: '0 28px 28px' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', background: '#232323', borderRadius: 20, padding: '64px 48px 44px', color: '#e9e7e4' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <img src="/logo.png" alt="INCAhub" style={{ height: 42, width: 'auto', filter: 'brightness(0) invert(1)' }} />
+            <img src="/logo.png" alt="INCAhub" style={{ height: 64, width: 'auto', filter: 'brightness(0) invert(1)' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 30, fontSize: 15, color: '#c9c6c1' }}>
             <span>hola@incahub.tech</span>
