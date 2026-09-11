@@ -6,7 +6,10 @@ html { scroll-behavior: smooth; }
 
 /* Responsive Utility Classes */
 .header-container {
-  max-width: 1240px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  max-width: 1240px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+}
+.mobile-menu-btn {
+  display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: #1b1b1b; padding: 4px;
 }
 .nav-menu {
   display: flex; align-items: center; gap: 34px; font-size: 15px; font-weight: 500; color: #3c3a38; flex-wrap: wrap;
@@ -37,13 +40,25 @@ html { scroll-behavior: smooth; }
 
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    padding: 16px;
-    gap: 16px;
+    padding: 16px 20px;
+    gap: 0;
+  }
+  .mobile-menu-btn {
+    display: block;
   }
   .nav-menu {
-    justify-content: center;
-    gap: 16px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    border-top: 1px solid rgba(27,27,27,.07);
+    margin-top: 16px;
+    align-items: flex-start;
+  }
+  .nav-menu.open {
+    display: flex;
   }
   .hero-buttons {
     justify-content: center;

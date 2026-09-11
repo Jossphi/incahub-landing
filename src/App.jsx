@@ -15,6 +15,7 @@ const Icon = ({ name }) => (
 export default function App() {
   const [openFaq, setOpenFaq] = useState(-1);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
     { label: 'Dashboard', badge: '' }, { label: 'Inbox', badge: '' }, { label: 'Cotizaciones', badge: '' },
@@ -75,12 +76,15 @@ export default function App() {
           <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <img src="/logo.png" alt="INCAhub" style={{ height: 64, width: 'auto' }} />
           </a>
-          <nav className="nav-menu">
-            <a href="#nosotros" style={{ color: 'inherit' }}>Nosotros</a>
-            <a href="#beneficios" style={{ color: 'inherit' }}>Beneficios</a>
-            <a href="#como-funciona" style={{ color: 'inherit' }}>Como funciona</a>
-            <a href="#testimonios" style={{ color: 'inherit' }}>Testimonios</a>
-            <a href="#faq" style={{ color: 'inherit' }}>Preguntas frecuentes</a>
+          <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? '✕' : '☰'}
+          </button>
+          <nav className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+            <a href="#nosotros" style={{ color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Nosotros</a>
+            <a href="#beneficios" style={{ color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Beneficios</a>
+            <a href="#como-funciona" style={{ color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Como funciona</a>
+            <a href="#testimonios" style={{ color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Testimonios</a>
+            <a href="#faq" style={{ color: 'inherit' }} onClick={() => setIsMobileMenuOpen(false)}>Preguntas frecuentes</a>
           </nav>
         </div>
       </header>
