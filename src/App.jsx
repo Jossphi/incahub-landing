@@ -71,11 +71,11 @@ export default function App() {
     <div style={{ width: '100%', overflowX: 'hidden', color: '#1b1b1b' }}>
       {/* NAV */}
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: '#fdf4ea', borderBottom: '1px solid rgba(27,27,27,.07)' }}>
-        <div style={{ maxWidth: 1240, margin: '0 auto', padding: '18px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
+        <div className="header-container">
           <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <img src="/logo.png" alt="INCAhub" style={{ height: 64, width: 'auto' }} />
           </a>
-          <nav style={{ display: 'flex', alignItems: 'center', gap: 34, fontSize: 15, fontWeight: 500, color: '#3c3a38', flexWrap: 'wrap' }}>
+          <nav className="nav-menu">
             <a href="#nosotros" style={{ color: 'inherit' }}>Nosotros</a>
             <a href="#beneficios" style={{ color: 'inherit' }}>Beneficios</a>
             <a href="#como-funciona" style={{ color: 'inherit' }}>Como funciona</a>
@@ -91,7 +91,7 @@ export default function App() {
         <div style={{ position: 'relative', maxWidth: 1240, margin: '0 auto', padding: '96px 28px 104px' }}>
           <h1 style={{ margin: 0, fontSize: 'clamp(40px,6.4vw,74px)', lineHeight: 1.06, fontWeight: 700, letterSpacing: '-.035em', maxWidth: '13ch' }}>Acelerando la transformación digital en Latam.</h1>
           <p style={{ margin: '26px 0 0', fontSize: 18, lineHeight: 1.6, color: '#6b6a67', maxWidth: '38ch' }}>Revolucionando la conexión entre empresas y agencias tecnológicas.</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 38 }}>
+          <div className="hero-buttons">
             <a href="https://app.incahub.tech/" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#1b1b1b', color: '#fff', fontSize: 15, fontWeight: 600, border: '1px solid #1b1b1b' }}>Publicar Requerimiento</a>
             <a href="https://app.incahub.tech/" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#fff', color: '#1b1b1b', fontSize: 15, fontWeight: 600, border: '1px solid rgba(27,27,27,.12)' }}>Registro Agencia</a>
           </div>
@@ -102,9 +102,9 @@ export default function App() {
       <section style={{ position: 'relative', background: '#fdf4ea', padding: '0 28px 90px' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(232,98,44,.18) 1px, transparent 1px)', backgroundSize: '18px 18px' }}></div>
         <div style={{ position: 'relative', maxWidth: 1180, margin: '0 auto', borderRadius: 28, padding: 16, background: 'rgba(255,255,255,.55)', border: '1px solid rgba(232,98,44,.35)', boxShadow: '0 30px 70px -40px rgba(27,27,27,.35)' }}>
-          <div style={{ borderRadius: 20, overflow: 'hidden', background: '#fff', border: '1px solid rgba(27,27,27,.08)', display: 'grid', gridTemplateColumns: 'minmax(0,210px) minmax(0,1fr) minmax(0,240px)' }}>
+          <div className="dashboard-grid">
             {/* sidebar */}
-            <aside style={{ background: '#fafafa', borderRight: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
+            <aside className="dashboard-sidebar" style={{ background: '#fafafa', borderRight: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 14px' }}>
                 <img src="/logo.png" alt="INCAhub" style={{ height: 40, width: 'auto' }} />
               </div>
@@ -144,7 +144,7 @@ export default function App() {
               </div>
             </div>
             {/* right */}
-            <aside style={{ borderLeft: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 14, minWidth: 0 }}>
+            <aside className="dashboard-sidebar" style={{ borderLeft: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 14, minWidth: 0 }}>
               <div style={{ fontSize: 14, fontWeight: 600 }}>Agencias sugeridas</div>
               {agencies.map((a, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: 10, border: '1px solid rgba(27,27,27,.07)', borderRadius: 10, minWidth: 0 }}>
@@ -273,10 +273,10 @@ export default function App() {
       {/* FOOTER */}
       <footer style={{ background: '#fff', padding: '0 28px 28px' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', background: '#232323', borderRadius: 20, padding: '64px 48px 44px', color: '#e9e7e4' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div className="footer-container">
             <img src="/logo.png" alt="INCAhub" style={{ height: 64, width: 'auto', filter: 'brightness(0) invert(1)' }} />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 30, fontSize: 15, color: '#c9c6c1' }}>
+          <div className="footer-content">
             <span>hola@incahub.tech</span>
             <span>936 282 838</span>
             <span>Lima — Perú</span>
