@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #ffffff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #1b1b1b; text-decoration: none; }
+a:hover { color: #e8622c; }
+html { scroll-behavior: smooth; }
