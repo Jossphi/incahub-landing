@@ -72,14 +72,7 @@ export default function App() {
       <header style={{ position: 'sticky', top: 0, zIndex: 50, background: '#fdf4ea', borderBottom: '1px solid rgba(27,27,27,.07)' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', padding: '18px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
           <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <circle cx="16" cy="16" r="14" stroke="#5b4bc4" strokeWidth="2"></circle>
-              <path d="M16 4c4 4 4 8 0 12s-4 8 0 12" stroke="#7a6ae0" strokeWidth="2"></path>
-              <path d="M4 16c4-4 8-4 12 0s8 4 12 0" stroke="#5b4bc4" strokeWidth="2"></path>
-            </svg>
-            <span style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-.02em' }}>
-              <span style={{ color: '#5b4bc4' }}>INCA</span><span style={{ color: '#e8622c' }}>hub</span>
-            </span>
+            <img src="/logo.png" alt="INCAhub" style={{ height: 42, width: 'auto' }} />
           </a>
           <nav style={{ display: 'flex', alignItems: 'center', gap: 34, fontSize: 15, fontWeight: 500, color: '#3c3a38', flexWrap: 'wrap' }}>
             <a href="#nosotros" style={{ color: 'inherit' }}>Nosotros</a>
@@ -112,8 +105,7 @@ export default function App() {
             {/* sidebar */}
             <aside style={{ background: '#fafafa', borderRight: '1px solid rgba(27,27,27,.07)', padding: '18px 14px', display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 14px' }}>
-                <span style={{ width: 18, height: 18, borderRadius: 5, background: '#5b4bc4', display: 'inline-block' }}></span>
-                <span style={{ fontWeight: 700, fontSize: 15 }}>INCAhub</span>
+                <img src="/logo.png" alt="INCAhub" style={{ height: 26, width: 'auto' }} />
               </div>
               {navItems.map((item, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: '8px 10px', borderRadius: 8, fontSize: 13, color: '#5c5a57' }}>
@@ -281,11 +273,7 @@ export default function App() {
       <footer style={{ background: '#fff', padding: '0 28px 28px' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto', background: '#232323', borderRadius: 20, padding: '64px 48px 44px', color: '#e9e7e4' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <circle cx="16" cy="16" r="14" stroke="#ffffff" strokeWidth="2"></circle>
-              <path d="M16 4c4 4 4 8 0 12s-4 8 0 12" stroke="#bdbab5" strokeWidth="2"></path>
-            </svg>
-            <span style={{ fontSize: 24, fontWeight: 800, letterSpacing: '-.02em' }}><span style={{ color: '#fff' }}>INCA</span><span style={{ color: '#e8622c' }}>hub</span></span>
+            <img src="/logo.png" alt="INCAhub" style={{ height: 42, width: 'auto', filter: 'brightness(0) invert(1)' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 30, fontSize: 15, color: '#c9c6c1' }}>
             <span>hola@incahub.tech</span>
