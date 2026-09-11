@@ -14,6 +14,7 @@ const Icon = ({ name }) => (
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState(-1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navItems = [
     { label: 'Dashboard', badge: '' }, { label: 'Inbox', badge: '' }, { label: 'Cotizaciones', badge: '' },
@@ -249,7 +250,7 @@ export default function App() {
           <div>
             <h2 style={{ margin: 0, fontSize: 'clamp(34px,4.4vw,52px)', lineHeight: 1.1, fontWeight: 700, letterSpacing: '-.03em', maxWidth: '10ch' }}>Preguntas frecuentes</h2>
             <p style={{ margin: '22px 0 30px', fontSize: 16, color: '#7a7975' }}>¿Tienes alguna pregunta? ¡No dudes en contactarnos!</p>
-            <a href="mailto:hola@incahub.tech" style={{ display: 'inline-flex', padding: '14px 26px', borderRadius: 10, border: '1px solid rgba(27,27,27,.14)', fontSize: 15, fontWeight: 600 }}>Contáctanos</a>
+            <button onClick={() => setIsModalOpen(true)} style={{ display: 'inline-flex', padding: '14px 26px', borderRadius: 10, border: '1px solid rgba(27,27,27,.14)', fontSize: 15, fontWeight: 600, background: 'transparent', cursor: 'pointer' }}>Contáctanos</button>
           </div>
           <div style={{ background: '#fafafa', borderRadius: 18, padding: 16 }}>
             {faqs.map((f, i) => (
@@ -291,6 +292,34 @@ export default function App() {
       <a href="#top" style={{ position: 'fixed', right: 22, bottom: 22, zIndex: 60, width: 44, height: 44, borderRadius: 999, background: '#fff', border: '1px solid rgba(27,27,27,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#3c3a38' }}>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
       </a>
+
+      {/* CONTACT MODAL */}
+      {isModalOpen && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+          <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(3px)' }} onClick={() => setIsModalOpen(false)}></div>
+          <div style={{ position: 'relative', background: '#fff', borderRadius: 20, padding: 32, width: '100%', maxWidth: 440, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
+              <h3 style={{ margin: 0, fontSize: 22, fontWeight: 700 }}>Contáctanos</h3>
+              <button onClick={() => setIsModalOpen(false)} style={{ background: 'transparent', border: 'none', fontSize: 24, cursor: 'pointer', lineHeight: 1, padding: 0 }}>&times;</button>
+            </div>
+            <form onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); alert('Mensaje enviado. Nos pondremos en contacto contigo pronto.'); }} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div>
+                <label style={{ display: 'block', fontSize: 14, fontWeight: 600, marginBottom: 8 }}>Nombre y Apellido</label>
+                <input required type="text" placeholder="Ej. Juan Pérez" style={{ width: '100%', padding: '12px 14px', borderRadius: 10, border: '1px solid #ddd', fontSize: 15, outline: 'none' }} />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: 14, fontWeight: 600, marginBottom: 8 }}>Correo electrónico</label>
+                <input required type="email" placeholder="tu@correo.com" style={{ width: '100%', padding: '12px 14px', borderRadius: 10, border: '1px solid #ddd', fontSize: 15, outline: 'none' }} />
+              </div>
+              <div>
+                <label style={{ display: 'block', fontSize: 14, fontWeight: 600, marginBottom: 8 }}>Mensaje</label>
+                <textarea required rows="4" placeholder="¿En qué te podemos ayudar?" style={{ width: '100%', padding: '12px 14px', borderRadius: 10, border: '1px solid #ddd', fontSize: 15, resize: 'vertical', outline: 'none' }}></textarea>
+              </div>
+              <button type="submit" style={{ marginTop: 8, padding: '14px', borderRadius: 10, background: '#1b1b1b', color: '#fff', fontSize: 15, fontWeight: 600, border: 'none', cursor: 'pointer' }}>Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
