@@ -98,8 +98,8 @@ export default function App() {
           <h1 style={{ margin: 0, fontSize: 'clamp(40px,6.4vw,74px)', lineHeight: 1.06, fontWeight: 700, letterSpacing: '-.035em', maxWidth: '13ch' }}>Acelerando la transformación digital en Latam.</h1>
           <p style={{ margin: '26px 0 0', fontSize: 18, lineHeight: 1.6, color: '#6b6a67', maxWidth: '38ch' }}>Revolucionando la conexión entre empresas y agencias tecnológicas.</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 38 }}>
-            <a href="#faq" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#1b1b1b', color: '#fff', fontSize: 15, fontWeight: 600, border: '1px solid #1b1b1b' }}>Publicar Requerimiento</a>
-            <a href="#faq" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#fff', color: '#1b1b1b', fontSize: 15, fontWeight: 600, border: '1px solid rgba(27,27,27,.12)' }}>Registro Agencia</a>
+            <a href="https://app.incahub.tech/" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#1b1b1b', color: '#fff', fontSize: 15, fontWeight: 600, border: '1px solid #1b1b1b' }}>Publicar Requerimiento</a>
+            <a href="https://app.incahub.tech/" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', padding: '15px 26px', borderRadius: 999, background: '#fff', color: '#1b1b1b', fontSize: 15, fontWeight: 600, border: '1px solid rgba(27,27,27,.12)' }}>Registro Agencia</a>
           </div>
         </div>
       </section>
